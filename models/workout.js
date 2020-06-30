@@ -21,14 +21,6 @@ const WorkoutSchema = new Schema({
   ]
 })
 
-const router = require("express").Router();
-const Workout = require("../models/workout.js");
+const Workout = mongoose.model("Workout", WorkoutSchema);
 
-
-
-router.get("/exercise", (req, res) => {
-console.log("Hi there")
-  });
-
-
-module.exports = router
+module.exports = Workout
