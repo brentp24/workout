@@ -1,3 +1,5 @@
+module.exports = routers
+
 const API = {
   async getLastWorkout() {
     let res;
