@@ -1,4 +1,3 @@
-
 const router = require("express").Router();
 const db = require("../models");
 
@@ -18,6 +17,7 @@ router.get("/api/workouts", function (req, res) {
 router.post("/api/workouts", function (req, res) {
   db.Workout.create(req.body)
       .then(data => {
+        console.log(data);
           res.json(data);
       })
       .catch(err => {
@@ -33,6 +33,7 @@ router.put("/api/workouts/:id", function (req, res) {
     $push: { exercises:req.body } 
   })
       .then(data => {
+        console.log(data);
           res.json(data);
       })
       .catch(err => {
