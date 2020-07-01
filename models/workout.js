@@ -31,7 +31,7 @@ const WorkoutSchema = new Schema({
   }
 );
 
-// adds a dynamically-created property to schema
+// adds all durations together to get total Duration.  
 WorkoutSchema.virtual("totalDuration").get(function () {
   var total = 0;
 
